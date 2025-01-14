@@ -1,143 +1,419 @@
 <!DOCTYPE html>
 <html data-bs-theme="light" lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900&amp;display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;display=swap">
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg fixed-top bg-dark navbar-custom navbar-dark">
-        <div class="container"><a class="navbar-brand" href="#">Plesca Evelyn Iulia</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarResponsive"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"></li>
-                    <li class="nav-item"></li>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Plesca Evelyn Iulia</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Plesca Evelyn</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work Experience</a></li>
+          <li><a href="#experience">Skill Proficiency</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Plesca Evelyn</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#work" onclick="toggleMenu()">Work Experience</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skill Proficiency</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+        <div></div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img
+          src="./assets/img/profile-pic.jpg"
+          alt="profile-pic"
+          class="section__pic"
+        />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Nice to meet you, I'm</p>
+        <h1 class="title">Pleșca Evelyn-Iulia</h1>
+        <p class="section__text__p2">Embedded Software Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Plesca_Evelyn_Iulia_CV_upd.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/img/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/evelyn-plesca/'"
+          />
+          <img
+            src="./assets/img/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/plescaevelyn'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/img/about-pic.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/img/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>
+                2+ years <br />
+                Embedded Development
+              </p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/img/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>
+                B.Sc. Automation and Applied Informatics ━ 2020-2024 <br />M.Sc.
+                Communication Networks and Distributed Systems ━ 2024-ongoing
+              </p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>I graduated from <a href="https://www.utcluj.ro/">TUC-N</a> and studied Automation and Applied Informatics at the Faculty of Automation and Computer Science. I am now studying for my master's degree in Computer Networks and Distributed Systems. <br> During my studies, I had the opportunity to gain experience from three sought-after internships, where I grasped the workflow and necessary skills for Back-end and Embedded Software Development.<p>I also had fun by participating in hackathons such as iTEC 2021, Polihack 2021, ebec 2023, BattleLab Robotica 2022 and 2023 and NASA SpaceApps 2024. These contests, as well as my work experience, helped me gain an overview about web, app and embedded development processes, as well as shape my teamworking and presentation skills.<br>Currently, I am looking for work in Software Development and wanting to refine my current skills and gain new ones by contributing to a real-life project.</p>
+          </div>
+        </div>
+        <img
+          src="./assets/img/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#work'"
+        />
+      </div>
+    </section>
+    <section id="work">
+        <p class="section__text__p1">Discover My</p>
+        <h1 class="title">Work Experience</h1>
+        <div class="work-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+                <h2 class="work-sub-title project-title">Working Student in Hardware Related Software</h2>
+                <ul>
+                    <li>Developed unit tests for enterprise components using GTests</li>
+                    <li>Designed my bachelor’s thesis project: <a href="#projects">Mapping Techniques using SLAM</a></li>
+                    <li>Developed an ECU Manager (CAN communication with the other elements of the system) during my internship project</li>
+                    <li>Used Trace32 to debug code</li>
+                    <li>Mentored the 2024 team of interns and configured a test bench for them</li>
                 </ul>
             </div>
-        </div>
-    </nav>
-    <header class="text-center text-white masthead">
-        <div class="masthead-content">
-            <div class="container">
-                <h1 class="masthead-heading mb-0">Welcome to my page!</h1>
-                <h2 class="masthead-subheading mb-0">I am Plesca Evelyn-Iulia :)</h2><a class="btn btn-primary btn-xl rounded-pill mt-5" role="button" href="#">Get to know me</a>
+            <div class="details-container">
+                <h2 class="work-sub-title project-title">Software Development Intern</h2>
+                <ul>
+                    <li>Learned about the basics of back-end web development using Java</li>
+                    <li>Developed code in Java and used RestAPIs and GraphQL to develop a migrator application</li>
+                    <li>Held ownership of two Jenkins pluggins and scheduled and performed releases, ensuring communication between the teams</li>
+                </ul>
             </div>
+            <div class="details-container">
+                <h2 class="work-sub-title project-title">Working Student in the Ultrasonic Department</h2>
+                <ul>
+                    <li>Created an LED matrix project and improved C and Python coding skills</li>
+                    <li>Utilized tools like CANape and CANoe to optimize ultrasonic signal processing for AI algorithms</li>
+                    <li>Learned about the Automotive development workflow and new concepts for me at the time such as V-model and requirements engineering</li>
+                </ul>
+            </div>
+          </div>
+          <img
+          src="./assets/img/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#experience'"
+        />
         </div>
-        <div class="bg-circle-1 bg-circle"></div>
-        <div class="bg-circle-2 bg-circle"></div>
-        <div class="bg-circle-3 bg-circle"></div>
-        <div class="bg-circle-4 bg-circle"></div>
-    </header>
-    <section>
-        <section>
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 order-lg-2">
-                        <div class="p-5"><img class="rounded-circle img-fluid" src="assets/img/college-pic.jpg" width="360" height="480"></div>
-                    </div>
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="p-5">
-                            <h2 class="display-4">Education</h2>
-                            <p>I am currently a fourth year student at the Technical University of Cluj-Napoca. I study Automation and Applied Informatics and I followed the Applied informatics specialisation. During these years, I had the opportunity to learn about various subjects and dezvolt myself in the academic field. Currently I am writing my thesis project, an Autonomous Mobile Robot which uses LiDAR Cartographing.</p>
-                        </div>
-                    </div>
+      </section>
+    <section id="experience">
+      <p class="section__text__p1">Discover My</p>
+      <h1 class="title">Skills</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Programming Languages</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/img/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C</h3>
+                  <p>Experienced</p>
                 </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/img/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C++</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/img/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>MATLAB</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/img/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Java</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/img/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/img/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Beginner</p>
+                </div>
+              </article>
             </div>
-        </section>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Development & Debugging Tools</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/img/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/img/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Simulink</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/img/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>ROS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/img/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Linux OS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/img/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>GTests</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/img/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Trace32</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/img/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
     </section>
-    <section>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 order-lg-1">
-                    <div class="p-5">
-                        <h2 class="display-4">Work experience</h2>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-2">
-                    <div class="p-5">
-                        <p>In the past, I have made various internships.
-                          <br><br>
-                          Currently I am a<strong> Working Student</strong> at <strong>Bosch </strong>in the Engineering Hardware related department since July 2023.
-                          <br><br>
-                          Between November 2021 and January 2023 I was a&nbsp;&nbsp;<strong>Software Developer Intern </strong>at <strong>Micro Focus</strong>.
-                          <br><br>
-                          Between&nbsp;July 2021 and October 2021 I was a <strong>Working Student </strong>in the Engineering Parking Systems department at <strong>Bosch</strong>.
-                          <br><br>
-                          In July 2019 I worked as a Assembler of Subelectronic Assemblies at Zollner, which made me passionate about this industry.&nbsp;&nbsp;</p>
-                    </div>
-                </div>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <div class="article-container">
+              <img
+                src="./assets/img/project-1.png"
+                alt="Mapping Techniques using SLAM, Bachelor's thesis project"
+                class="project-img"
+              />
             </div>
+            <h2 class="experience-sub-title project-title">
+              Mapping Techniques using SLAM
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/plescaevelyn/mapping-techniques-using-slam'"
+              >
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="details-container">
+            <div class="article-container">
+              <img
+                src="./assets/img/project-2.jpg"
+                alt="BattleLab Robotica 2022"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">
+              BattleLab Robotica
+            </h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://battlelab.ro/'"
+              >
+                Competition Page
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/img/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <script src="script.js"></script>
+    <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+          <div class="contact-info-container">
+            <img
+              src="./assets/img/email.png"
+              alt="Email icon"
+              class="icon contact-icon email-icon"
+            />
+            <p><a href="mailto:evelynplesca@gmail.com">evelynplesca@gmail.com</a></p>
+          </div>
+          <div class="contact-info-container">
+            <img
+              src="./assets/img/linkedin.png"
+              alt="LinkedIn icon"
+              class="icon contact-icon"
+            />
+            <p><a href="https://www.linkedin.com/in/evelyn-plesca/">LinkedIn</a></p>
+          </div>
         </div>
     </section>
-    <section>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 order-lg-2">
-                    <div class="p-5">
-                        <h2 class="display-4">Professional Competences</h2>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="p-5">
-                        <p>I have a deep understanding of the following programming languages:<br><strong>- </strong>C/C++<br><strong>- </strong>Java<br><strong>- </strong>Python<br><br>I have good experience with using the following tools:<br><strong>- </strong>GIT<br><strong>- </strong>Jira<br><br>I have also worked with Linux, AutoCAD, Solidworks and Photoshop, all of them completing my other skills so that I can work on projects.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <section>
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 order-lg-2">
-                        <div class="p-5"><img class="rounded-circle img-fluid" src="assets/img/blr.jpg" width="360" height="480"></div>
-                    </div>
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="p-5">
-                          <h2 class="display-4">Outstanding skills</h2>
-                            <p>I have participated in numerous hackathons and contests, in which I have perfected the following skills.</p>
-                            <br>
-                            <p><strong>-</strong> I have <strong>great problem solving skills</strong> developed at the mathematics, physics and informatics olympiads in high school and at university when participating in NASA SpaceApps Challenge 2023, BattleLab Robotica 2022 and 2023, PoliHack 2022, iTEC 2021 and others, where I have developed solutions for real problems</p>
-                            <p><strong>-</strong> I have <strong>good communication skills </strong> developed while working in various teams both at my current or former workplaces, at hackathons or during university projects.</p>
-                            <p><strong>-</strong> I am an <strong>Adaptable and Flexible</strong> person, which I can prove by my stack-change from a back-end web developer to an embedded developer
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <section>
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 order-lg-2">
-                    <div class="p-5">
-                        <h2 class="display-4">Foreign Languages</h2>
-                    </div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="p-5">
-                      <p>I speak the following languages </p>
-                      <!-- <br></br> -->
-                        <br> <strong> - Romanian </strong> - mother tongue</br>
-                        <br> <strong> - English </strong> - proficient, C2 level</br>
-                        <br> <strong> - Hungarian </strong> - proficient, C1 level</br>
-                        <br> <strong> - French </strong> - beginner, A2 level</br>
-                        <br> <strong> - Spanish </strong> - beginner, A1 level</br></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-5 bg-black">
-        <div class="container">
-            <p class="text-center text-white m-0 small">Copyright&nbsp;© Plesca Evelyn 2023</p>
-        </div>
+    <footer>
+        <nav>
+          <div class="nav-links-container">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work Experience</a></li>
+                <li><a href="#experience">Skill Proficiency</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+          </div>
+        </nav>
+        <p>Copyright &#169; 2025 Pleșca Evelyn-Iulia. All Rights Reserved.</p>
     </footer>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-</body>
-
+  </body>
 </html>
